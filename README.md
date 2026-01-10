@@ -60,9 +60,9 @@ Application de gestion d'emprunts basée sur une architecture microservices avec
 
 ```bash
 
-git clone https://github.com/VOTRE\_USERNAME/VOTRE\_REPO.git
+git clone https://github.com/seddib03/microservices-emprunt-app.git
 
-cd VOTRE\_REPO
+cd microservices-emprunt-app
 
 ```
 
