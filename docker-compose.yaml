@@ -38,33 +38,33 @@ services:
     image: mysql:8
     container_name: mysql-user
     environment:
-      MYSQL_DATABASE: db_user  # <-- Changez aussi ici de "userdb" à "db_user"
+      MYSQL_DATABASE: db_user  
       MYSQL_ROOT_PASSWORD: root
     ports:
       - "3306:3306"
     volumes:
       - mysql_user_data:/var/lib/mysql
     networks:
-      - biblio-network  # <--- AJOUTEZ CETTE LIGNE
+      - biblio-network  
 
   mysql-book:
     image: mysql:8
     container_name: mysql-book
     environment:
-      MYSQL_DATABASE: db_book  # <-- Changez aussi ici de "bookdb" à "db_book"
+      MYSQL_DATABASE: db_book  
       MYSQL_ROOT_PASSWORD: root
     ports:
       - "3307:3306"
     volumes:
       - mysql_book_data:/var/lib/mysql
     networks:
-      - biblio-network  # <--- AJOUTEZ CETTE LIGNE
+      - biblio-network  
 
   mysql-emprunt:
     image: mysql:8
     container_name: mysql-emprunt
     environment:
-      MYSQL_DATABASE: db_emprunter  # <-- Changez de "empruntdb" à "db_emprunter"
+      MYSQL_DATABASE: db_emprunter  
       MYSQL_ROOT_PASSWORD: root
     ports:
       - "3308:3306"
