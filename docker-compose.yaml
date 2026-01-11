@@ -38,13 +38,18 @@ services:
     image: mysql:8
     container_name: mysql-user
     environment:
+<<<<<<< HEAD
       MYSQL_DATABASE: db_user
+=======
+      MYSQL_DATABASE: db_user  
+>>>>>>> 1a3ba9ed81d67696234e86ccd520c4f4ceae2886
       MYSQL_ROOT_PASSWORD: root
     ports:
       - "3310:3306"
     volumes:
       - mysql_user_data:/var/lib/mysql
     networks:
+<<<<<<< HEAD
       - biblio-network
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
@@ -52,18 +57,26 @@ services:
       timeout: 10s
       retries: 20
       start_period: 40s
+=======
+      - biblio-network  
+>>>>>>> 1a3ba9ed81d67696234e86ccd520c4f4ceae2886
 
   mysql-book:
     image: mysql:8
     container_name: mysql-book
     environment:
+<<<<<<< HEAD
       MYSQL_DATABASE: db_book
+=======
+      MYSQL_DATABASE: db_book  
+>>>>>>> 1a3ba9ed81d67696234e86ccd520c4f4ceae2886
       MYSQL_ROOT_PASSWORD: root
     ports:
       - "3311:3306"
     volumes:
       - mysql_book_data:/var/lib/mysql
     networks:
+<<<<<<< HEAD
       - biblio-network
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
@@ -71,12 +84,19 @@ services:
       timeout: 10s
       retries: 20
       start_period: 40s
+=======
+      - biblio-network  
+>>>>>>> 1a3ba9ed81d67696234e86ccd520c4f4ceae2886
 
   mysql-emprunt:
     image: mysql:8
     container_name: mysql-emprunt
     environment:
+<<<<<<< HEAD
       MYSQL_DATABASE: db_emprunter
+=======
+      MYSQL_DATABASE: db_emprunter  
+>>>>>>> 1a3ba9ed81d67696234e86ccd520c4f4ceae2886
       MYSQL_ROOT_PASSWORD: root
     ports:
       - "3312:3306"
